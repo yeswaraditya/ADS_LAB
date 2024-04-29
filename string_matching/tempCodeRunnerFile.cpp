@@ -5,7 +5,7 @@ void findpattern( string text,string pattern)
 {
     int n=text.length(),m=pattern.length();
 
-    for(int i=0;i<=n-m;i++)
+    for(int i=0;i<n-m;i++)
     {
         int j;
         for(j=0;j<m;j++)
