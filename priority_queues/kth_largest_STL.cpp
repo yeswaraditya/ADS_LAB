@@ -1,28 +1,30 @@
 #include<bits/stdc++.h>
 using namespace std;
 
+vector<int> vec;
+
 int main()
 {
-    int n,element;
-    vector<int> heap;
-    cout<<"enter the no of elements\n";
+    cout<<"enter no of elements";
+    int n;
     cin>>n;
 
-    cout<<"enter the elements\n";
-    
+    vec.resize(n);
+
     for(int i=0;i<n;i++)
     {
-       cin>>element;
-        heap.push_back(element);
-    }
+       int element;
+       cout<<"enter element";
+       vec.push_back(element);
 
-    make_heap(heap.begin(),heap.end());
-    sort_heap(heap.begin(),heap.end());
+    }
+    
+    make_heap(vec.begin(),vec.end()); // makes min heap
+    sort_heap(vec.begin(),vec.end());   // sort heap to ascending
 
     int k;
-
-    cout<<"which largest element do u want";
+    cout<<"which largest do u want";
     cin>>k;
-    cout<<"the kth largest element is"<<heap[n-k]<<endl;
-    
+    cout<<"largest kth element is "<<vec[n-k]<<endl;
+
 }
